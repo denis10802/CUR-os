@@ -2,7 +2,7 @@
 
 namespace App\Domain\Department\DataTransferObjects;
 
-class InputDepartmentDto
+class CreateDepartmentDto
 {
     public string $name;
     public string $image_path;
@@ -11,12 +11,6 @@ class InputDepartmentDto
     {
       $this->name = $name;
       $this->image_path = $image_path;
-    }
-
-    public function get()
-    {
-
-
     }
 }
 
