@@ -2,15 +2,17 @@
 
 namespace App\Domain\Department\DataTransferObjects;
 
+use Illuminate\Http\UploadedFile;
+
 class CreateDepartmentDto
 {
     public string $name;
-    public string $image_path;
+    public UploadedFile $file;
 
-    public function __construct(string $name, string $image_path)
+    public function __construct(string $name, UploadedFile $file)
     {
       $this->name = $name;
-      $this->image_path = $image_path;
+      $this->file = $file;
     }
 }
 

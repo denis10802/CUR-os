@@ -14,8 +14,8 @@ class StoreDepartmentRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=> 'required|min:3',
-            'image'=> 'required|image|mimes:jpeg,jpg,png,gif|max:2048'
+            'name'=> 'required|min:5',
+            'image'=> 'required|mimes:jpeg,jpg,png,gif|max:20000'
         ];
     }
 }

@@ -18,7 +18,7 @@
                     <div class="card">
                         <!-- /.card-header -->
 
-                            <form id="quickForm" novalidate="novalidate" method="POST" action="{{route('store')}}" enctype="multipart/form-data">
+                            <form id="quickForm" novalidate="novalidate" method="POST" action="{{route('departments.store')}}" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="card-body">

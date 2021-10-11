@@ -5,11 +5,14 @@ namespace App\Domain\Department\Actions;
 use App\Domain\Department\DataTransferObjects\DepartmentResponseDto;
 use App\Domain\Department\DataTransferObjects\CreateDepartmentDto;
 use App\Domain\Department\Models\Department;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\Storage;
 
 
 class DepartmentService
 {
-    public function list(): array|\Illuminate\Database\Eloquent\Collection|\Illuminate\Support\Collection
+
+    public function list()
     {
        return Department::all()->map(function (Department $department) {
            return new DepartmentResponseDto($department->name, $department->image_path);
@@ -20,7 +23,7 @@ class DepartmentService
     {
         $department = new Department();
         $department->name = $dto->name;
-        $department->image_path = $dto->image_path;
+        $department->image_path = $dto->file->store('departments');
         $department->save();
 
         return $department;

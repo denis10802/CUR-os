@@ -25,13 +25,9 @@ class DepartmentsController
 
     public function store(StoreDepartmentRequest $request, DepartmentService $service)
     {
-        $request->validated();
-
-        $image = $request->file('image')->store('departments');
-        $dto = new CreateDepartmentDto($request->post('name'), $image);
+        $dto = new CreateDepartmentDto($request->post('name'), $request->file('image'));
         $service->create($dto);
 
         return redirect('/departments');
     }
-
 }
