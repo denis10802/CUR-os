@@ -10,6 +10,6 @@ Route::get('/users', [HomeController::class, 'users']);
 
 Route::prefix('departments')->group(function () {
     Route::get('/',[DepartmentsController::class,'index']);
-    Route::get('/create',[DepartmentsController::class,'create'])->name('create');
-    Route::post('/store',[DepartmentsController::class,'store'])->name('store');
+    Route::get('/create',[DepartmentsController::class,'create'])->name('departments.create');
+    Route::post('/',[DepartmentsController::class,'store'])->name('departments.store');
 });

@@ -27,11 +27,4 @@ class DepartmentFactory extends Factory
             'image_path'=>$this->faker->url
         ];
     }
-
-    protected static function newFactory()
-    {
-        return FlightFactory::new();
-    }
-
-
 }

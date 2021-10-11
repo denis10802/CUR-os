@@ -5,11 +5,11 @@ namespace App\Domain\Department\DataTransferObjects;
 class DepartmentResponseDto
 {
     public string $name;
-    public string $image_path;
+    public string $imagePath;
 
-    public function __construct(string $name, string $image_path)
+    public function __construct(string $name, string $imagePath)
     {
         $this->name = $name;
-        $this->image_path = $image_path;
+        $this->imagePath = $imagePath;
     }
 }

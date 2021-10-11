@@ -10,7 +10,7 @@
     <section class="content">
         <div class="btn-group">
             <div class="row p-4">
-                <a href="{{route('create')}}" class="btn btn-success">Добавить отрасль</a>
+                <a href="{{route('departments.create')}}" class="btn btn-success">Добавить отрасль</a>
             </div>
         </div>
     </section>
@@ -36,7 +36,7 @@
 
                                 <tr>
                                     <td>{{$department->name}}</td>
-                                    <td>{{$department->image_path}}</td>
+                                    <td>{{$department->imagePath}}</td>
                                 </tr>
 
                                 @endforeach
