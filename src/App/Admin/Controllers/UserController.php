@@ -14,7 +14,19 @@ class UserController
     public function __construct(private ResponseFactory $responseFactory)
     {
     }
-    
+
+    /**
+     * @param UserService $userService
+     * @return Response
+     */
+    public function index(UserService $userService): Response
+    {
+        $users = $userService->list();
+
+        return $this->responseFactory->view('admin.users.index', [
+            'users' => $users
+        ]);
+    }
 
     /**
      * @param DepartmentService $departmentService
