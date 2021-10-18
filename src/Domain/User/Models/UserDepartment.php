@@ -3,6 +3,7 @@
 namespace App\Domain\User\Models;
 
 use App\Domain\Department\Models\Department;
+use Database\Factories\UserDepartmentFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -24,8 +25,21 @@ class UserDepartment extends Model
 
     public $timestamps = false;
 
+    protected $fillable = [
+        'user_id',
+        'department_id'
+    ];
+
     public function department()
     {
         return $this->belongsTo(Department::class);
+    }
+
+    /**
+     * @return UserDepartmentFactory
+     */
+    protected static function newFactory(): UserDepartmentFactory
+    {
+        return UserDepartmentFactory::new();
     }
 }

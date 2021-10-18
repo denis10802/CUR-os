@@ -2,6 +2,7 @@
 
 namespace App\Domain\User\Models;
 
+use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -41,7 +42,8 @@ final class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'lastname',
+        'has_root_access'
     ];
 
     /**
@@ -54,8 +56,19 @@ final class User extends Authenticatable
         'remember_token',
     ];
 
-    public function department()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function department(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(UserDepartment::class);
+    }
+
+    /**
+     * @return UserFactory
+     */
+    protected static function newFactory(): UserFactory
+    {
+        return UserFactory::new();
     }
 }

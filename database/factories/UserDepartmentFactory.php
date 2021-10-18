@@ -3,17 +3,18 @@
 namespace Database\Factories;
 
 use App\Domain\Department\Models\Department;
+use App\Domain\User\Models\User;
+use App\Domain\User\Models\UserDepartment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-
-class DepartmentFactory extends Factory
+class UserDepartmentFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Department::class;
+    protected $model = UserDepartment::class;
 
     /**
      * Define the model's default state.
@@ -23,9 +24,8 @@ class DepartmentFactory extends Factory
     public function definition()
     {
         return [
-            'id' => $this->faker->randomNumber(),
-            'name' => $this->faker->title(),
-            'image_path' => $this->faker->url
+            'user_id' => User::factory(),
+            'department_id' => Department::factory(),
         ];
     }
 }
