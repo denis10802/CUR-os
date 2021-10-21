@@ -7,10 +7,11 @@ use App\Domain\User\DataTransferObjects\UserResponseDto;
 use App\Domain\User\Models\User;
 use App\Domain\User\Models\UserDepartment;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class UserService
 {
-    public function list(): \Illuminate\Database\Eloquent\Collection|array|\Illuminate\Support\Collection
+    public function list(): \Illuminate\Support\Collection
     {
         return User::with('department.department')->get()
             ->map(function (User $user) {
@@ -23,8 +24,18 @@ class UserService
             });
     }
 
-    public function create(CreateUserDto $userDto): User
+    /**
+     * @throws ValidationException
+     */
+    public function create(CreateUserDto $dto): User
     {
+        $emailAlreadyTaken = User::query()->where('email', $dto->email)->exists();
+
+        if ($emailAlreadyTaken) {
+            throw ValidationException::withMessages([
+                'email' => trans('validation.unique', ['attribute' => 'email']),
+            ]);
+        }
 
         $user = new User();
         $user->first_name = $dto->firstName;

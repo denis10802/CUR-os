@@ -10,11 +10,11 @@ class StoreUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'min:3', 'max:15'],
-            'lastname' => ['required', ' min:3', 'max:15'],
-            'email' => ['required', 'email:filter', 'unique:users,email'],
-            'password' => ['required', 'min:8', Password::min(8)->letters()],
-            'department' => ['required', 'unique:user_departments,department_id']
+            'firstName' => ['required', 'min:3', 'max:15'],
+            'lastName' => ['required', ' min:3', 'max:15'],
+            'email' => ['required', 'email:filter'],
+            'password' => ['required', Password::min(8)->letters()],
+            'departmentId' => ['required']
         ];
     }
 
