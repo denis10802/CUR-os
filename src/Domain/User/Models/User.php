@@ -12,8 +12,8 @@ use Illuminate\Notifications\Notifiable;
  * App\Domain\User\Models\User
  *
  * @property int $id
- * @property string $name
- * @property string $lastname
+ * @property string $first_name
+ * @property string $last_name
  * @property string $email
  * @property string $password
  * @property int $has_root_access

@@ -12,14 +12,15 @@ class UserService
 {
     public function list(): \Illuminate\Database\Eloquent\Collection|array|\Illuminate\Support\Collection
     {
-        return User::all()->map(function (User $user) {
-            return new UserResponseDto(
-                $user->name,
-                $user->lastname,
-                $user->email,
-                $user->department->department->name
-            );
-        });
+        return User::with('department.department')->get()
+            ->map(function (User $user) {
+                return new UserResponseDto(
+                    $user->first_name,
+                    $user->last_name,
+                    $user->email,
+                    $user->department->department->name
+                );
+            });
     }
 
     public function create(CreateUserDto $userDto): User

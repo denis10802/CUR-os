@@ -51,12 +51,13 @@ class UserController
         UserService      $userService
     ): Response
     {
-        $userDto = new CreateUserDto(
-            $userRequest->post('name'),
-            $userRequest->post('lastname'),
+
+        $user = new CreateUserDto(
+            $userRequest->post('firstName'),
+            $userRequest->post('lastName'),
             $userRequest->post('email'),
             $userRequest->post('password'),
-            $userRequest->post('department')
+            (int)$userRequest->post('departmentId'),
         );
         $userService->create($userDto);
 
