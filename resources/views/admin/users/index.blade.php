@@ -10,7 +10,12 @@
     <section class="content">
         <div class="btn-group">
             <div class="row p-4">
-                <a href="{{route('user.create')}}" class="btn btn-success">Добавить пользователя</a>
+                <a
+                    href="{{route('user.create')}}"
+                    class="btn btn-success"
+                >
+                    Добавить пользователя
+                </a>
             </div>
         </div>
     </section>
@@ -23,10 +28,13 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table
+                                id="example1"
+                                class="table table-bordered table-striped"
+                            >
                                 <thead>
                                 <tr>
-                                    <th>email</th>
+                                    <th>E-mail</th>
                                     <th>Пользователь</th>
                                     <th>Департамент</th>
                                 </tr>
@@ -35,8 +43,8 @@
                                 @foreach($users as $user)
                                     <tr>
                                         <td>{{$user->email}}</td>
-                                        <td>{{$user->name.' '.$user->lastname}}</td>
-                                        <td>{{$user->department}}</td>
+                                        <td>{{$user->firstName.' '.$user->lastName}}</td>
+                                        <td>{{$user->departmentName}}</td>
                                     </tr>
                                 @endforeach
 

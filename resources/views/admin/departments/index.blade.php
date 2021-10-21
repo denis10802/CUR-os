@@ -3,14 +3,19 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Список департаментов</h1>
+    <h1>Список отраслей</h1>
 @stop
 
 @section('content')
     <section class="content">
         <div class="btn-group">
             <div class="row p-4">
-                <a href="{{route('departments.create')}}" class="btn btn-success">Добавить отрасль</a>
+                <a
+                    href="{{route('departments.create')}}"
+                    class="btn btn-success"
+                >
+                    Добавить отрасль
+                </a>
             </div>
         </div>
     </section>
@@ -23,7 +28,10 @@
                     <div class="card">
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table
+                                id="example1"
+                                class="table table-bordered table-striped"
+                            >
                                 <thead>
                                 <tr>
                                     <th>Департамент</th>
@@ -34,10 +42,10 @@
 
                                 @foreach($departments as $department)
 
-                                <tr>
-                                    <td>{{$department->name}}</td>
-                                    <td>{{$department->imagePath}}</td>
-                                </tr>
+                                    <tr>
+                                        <td>{{$department->name}}</td>
+                                        <td>{{$department->imagePath}}</td>
+                                    </tr>
 
                                 @endforeach
 

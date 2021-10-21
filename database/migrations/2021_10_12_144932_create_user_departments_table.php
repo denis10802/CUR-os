@@ -14,9 +14,9 @@ class CreateUserDepartmentsTable extends Migration
     public function up()
     {
         Schema::create('user_departments', function (Blueprint $table) {
-
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('department_id')->unique()->constrained()->onDelete('cascade');
+            $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('department_id')->constrained();
         });
     }
 
