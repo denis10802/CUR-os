@@ -2,8 +2,10 @@
 
 namespace App\Domain\Department\Models;
 
+use Database\Factories\DepartmentFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+
 
 /**
  * App\Domain\Department\Models\Department
@@ -13,17 +15,17 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $image_path
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|Department newModelQuery()
+ * @method static \Database\Factories\DepartmentFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Department newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Department query()
- * @method static \Illuminate\Database\Eloquent\Builder|Department whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Department whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Department whereImagePath($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Department whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Department whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Department extends Model
 {
     use HasFactory;
+
+    protected static function newFactory(): DepartmentFactory
+    {
+        return DepartmentFactory::new();
+    }
 }

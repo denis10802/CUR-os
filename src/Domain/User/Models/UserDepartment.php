@@ -14,7 +14,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $department_id
  * @property-read Department $department
  * @method static \Database\Factories\DepartmentFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment query()
  * @mixin \Eloquent
@@ -25,19 +24,11 @@ class UserDepartment extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'user_id',
-        'department_id'
-    ];
-
-    public function department()
+    public function department(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Department::class);
     }
 
-    /**
-     * @return UserDepartmentFactory
-     */
     protected static function newFactory(): UserDepartmentFactory
     {
         return UserDepartmentFactory::new();

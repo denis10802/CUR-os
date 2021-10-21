@@ -15,10 +15,6 @@ class UserController
     {
     }
 
-    /**
-     * @param UserService $userService
-     * @return Response
-     */
     public function index(UserService $userService): Response
     {
         $users = $userService->list();
@@ -28,10 +24,6 @@ class UserController
         ]);
     }
 
-    /**
-     * @param DepartmentService $departmentService
-     * @return Response
-     */
     public function create(DepartmentService $departmentService): Response
     {
         $departments = $departmentService->list();
@@ -42,13 +34,11 @@ class UserController
     }
 
     /**
-     * @param StoreUserRequest $userRequest
-     * @param UserService $userService
-     * @return Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function store(
         StoreUserRequest $userRequest,
-        UserService      $userService
+        UserService      $userService,
     ): Response
     {
 
@@ -59,9 +49,8 @@ class UserController
             $userRequest->post('password'),
             (int)$userRequest->post('departmentId'),
         );
-        $userService->create($userDto);
+        $userService->create($user);
 
         return $this->responseFactory->redirectToRoute('user.index');
     }
-
 }

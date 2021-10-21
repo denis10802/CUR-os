@@ -4,12 +4,11 @@ namespace App\Domain\Department\DataTransferObjects;
 
 class DepartmentResponseDto
 {
-    public string $name;
-    public string $imagePath;
-
-    public function __construct(string $name, string $imagePath)
+    public function __construct(
+        public string $name,
+        public string $imagePath,
+        public string $id,
+    )
     {
-        $this->name = $name;
-        $this->imagePath = $imagePath;
     }
 }

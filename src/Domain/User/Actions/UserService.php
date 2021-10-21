@@ -25,15 +25,16 @@ class UserService
 
     public function create(CreateUserDto $userDto): User
     {
-        $user = new User();
-        $userDepartment = new UserDepartment();
 
-        $user->name = $userDto->name;
-        $user->lastname = $userDto->lastname;
-        $user->email = $userDto->email;
-        $user->password = Hash::make($userDto->password);
-        $userDepartment->department_id = $userDto->department;
+        $user = new User();
+        $user->first_name = $dto->firstName;
+        $user->last_name = $dto->lastName;
+        $user->email = $dto->email;
+        $user->password = Hash::make($dto->password);
         $user->save();
+
+        $userDepartment = new UserDepartment();
+        $userDepartment->department_id = $dto->departmentId;
         $user->department()->save($userDepartment);
 
         return $user;

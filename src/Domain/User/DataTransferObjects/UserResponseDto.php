@@ -5,16 +5,11 @@ namespace App\Domain\User\DataTransferObjects;
 class UserResponseDto
 {
     public function __construct(
-        public string $name,
-        public string $lastname,
+        public string $firstName,
+        public string $lastName,
         public string $email,
-        public string $department
+        public string $departmentName
     )
     {
-        $this->name = $name;
-        $this->lastname = $lastname;
-        $this->email = $email;
-        $this->department = $department;
     }
-
 }
