@@ -2,6 +2,18 @@
 
 declare(strict_types=1);
 
+use App\App\Admin\Controllers\DepartmentsController;
+use App\App\Admin\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [\App\App\Admin\Controllers\HomeController::class, 'index']);
+Route::prefix('users')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name('user.index');
+    Route::get('/create', [UserController::class, 'create'])->name('user.create');
+    Route::post('/', [UserController::class, 'store'])->name('user.store');
+});
+
+Route::prefix('departments')->group(function () {
+    Route::get('/', [DepartmentsController::class, 'index'])->name('departments.index');
+    Route::get('/create', [DepartmentsController::class, 'create'])->name('departments.create');
+    Route::post('/', [DepartmentsController::class, 'store'])->name('departments.store');
+});

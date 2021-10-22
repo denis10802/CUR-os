@@ -161,6 +161,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Foundation\Support\Providers\AuthServiceProvider::class,
         Illuminate\Foundation\Support\Providers\RouteServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         /*
          * Package Service Providers...
