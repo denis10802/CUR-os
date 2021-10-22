@@ -12,7 +12,6 @@ Route::prefix('users')->group(function () {
     Route::post('/', [UserController::class, 'store'])->name('user.store');
 });
 
-
 Route::prefix('departments')->group(function () {
     Route::get('/', [DepartmentsController::class, 'index'])->name('departments.index');
     Route::get('/create', [DepartmentsController::class, 'create'])->name('departments.create');

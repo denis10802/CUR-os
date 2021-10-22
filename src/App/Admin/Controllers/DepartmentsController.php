@@ -19,7 +19,7 @@ final class DepartmentsController
         $departments = $service->list();
 
         return $this->responseFactory->view('admin.departments.index', [
-            'departments' => $departments
+            'departments' => $departments,
         ]);
     }
 
@@ -30,9 +30,8 @@ final class DepartmentsController
 
     public function store(
         StoreDepartmentRequest $request,
-        DepartmentService      $service,
-    ): Response
-    {
+        DepartmentService $service,
+    ): Response {
         $dto = new CreateDepartmentDto(
             $request->post('name'),
             $request->file('image')

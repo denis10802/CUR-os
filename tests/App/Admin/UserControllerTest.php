@@ -20,7 +20,7 @@ class UserControllerTest extends TestCase
                 ->for(Department::factory(), 'department'), 'department')
             ->create([
                 'first_name' => 'Тестовый',
-                'last_name' => 'User'
+                'last_name' => 'User',
             ]);
 
         // Act
@@ -34,7 +34,6 @@ class UserControllerTest extends TestCase
 
     public function test_form_create_user()
     {
-
         // Arrange
         $department = Department::factory()->create();
 
@@ -56,8 +55,6 @@ class UserControllerTest extends TestCase
         $this->assertSame($user->email, 'defe@email.com');
         $this->assertSame($user->first_name, 'Тестовый');
         $this->assertSame($user->last_name, 'Пользователь');
-        $this->assertSame((int)$user->department->department_id, $department->id);
+        $this->assertSame((int) $user->department->department_id, $department->id);
     }
-
-
 }

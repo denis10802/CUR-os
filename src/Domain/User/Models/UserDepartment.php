@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Domain\User\Models\UserDepartment
+ * App\Domain\User\Models\UserDepartment.
  *
- * @property int $user_id
- * @property int $department_id
- * @property-read Department $department
+ * @property int        $user_id
+ * @property int        $department_id
+ * @property Department $department
+ *
  * @method static \Database\Factories\DepartmentFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment query()

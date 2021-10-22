@@ -9,7 +9,6 @@ class UserResponseDto
         public string $lastName,
         public string $email,
         public string $departmentName
-    )
-    {
+    ) {
     }
 }

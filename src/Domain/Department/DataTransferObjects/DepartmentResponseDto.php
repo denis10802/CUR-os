@@ -8,7 +8,6 @@ class DepartmentResponseDto
         public string $name,
         public string $imagePath,
         public string $id,
-    )
-    {
+    ) {
     }
 }

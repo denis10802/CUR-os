@@ -34,7 +34,7 @@ class UserServiceTest extends TestCase
             ->create([
                 'first_name' => 'Тестовый',
                 'last_name' => 'Пользователь',
-                'email' => 'example@mail.ru'
+                'email' => 'example@mail.ru',
             ]);
 
         // Act
@@ -46,7 +46,6 @@ class UserServiceTest extends TestCase
         $this->assertSame('Пользователь', $users[0]->lastName);
         $this->assertSame('example@mail.ru', $users[0]->email);
     }
-
 
     public function test_user_create()
     {
@@ -64,7 +63,7 @@ class UserServiceTest extends TestCase
         $user = $this->service->create($userCreateDto);
 
         // Assert
-        $this->assertSame((int)$user->department->department_id, $department->id);
+        $this->assertSame((int) $user->department->department_id, $department->id);
         $this->assertSame('example@mail.ru', $user->email);
         $this->assertSame('Тестовый', $user->first_name);
         $this->assertSame('Пользователь', $user->last_name);
@@ -76,7 +75,7 @@ class UserServiceTest extends TestCase
         User::factory()->create([
             'first_name' => 'Тестовый',
             'last_name' => 'Пользователь',
-            'email' => 'test@email.com'
+            'email' => 'test@email.com',
         ]);
         $user = User::firstOr();
 
@@ -93,8 +92,7 @@ class UserServiceTest extends TestCase
         $this->assertSame('test@email.com', $user->email);
         $this->assertSame('Тестовый', $user->first_name);
         $response->assertSessionHasErrors([
-            'email' => 'The email has already been taken.'
+            'email' => 'The email has already been taken.',
         ]);
-
     }
 }

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Title
@@ -225,14 +224,12 @@ return [
     */
 
     'menu' => [
-
         // Sidebar items:
 
         [
             'text' => 'Пользователи',
             'url' => '/users',
-            'icon' => 'fas fa-fw fa-user'
-
+            'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Отрасли',
@@ -248,9 +245,7 @@ return [
             'text' => 'change_password',
             'url' => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
-        ]
-
-
+        ],
     ],
 
     /*

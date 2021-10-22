@@ -10,7 +10,7 @@ class StoreDepartmentRequest extends FormRequest
     {
         return [
             'name' => ['required', 'min:5'],
-            'image' => ['required', 'image', 'max:20000']
+            'image' => ['required', 'image', 'max:20000'],
         ];
     }
 }

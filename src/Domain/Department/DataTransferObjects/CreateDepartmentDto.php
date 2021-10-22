@@ -7,10 +7,8 @@ use Illuminate\Http\UploadedFile;
 class CreateDepartmentDto
 {
     public function __construct(
-        public string       $name,
+        public string $name,
         public UploadedFile $file
-    )
-    {
+    ) {
     }
 }
-

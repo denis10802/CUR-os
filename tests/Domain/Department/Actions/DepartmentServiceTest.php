@@ -20,7 +20,7 @@ class DepartmentServiceTest extends TestCase
         $dto = new DepartmentResponseDto('Retdvsaabb v vvhgu', 'hhdddd/dkks/ppqw.gps', 1);
         Department::factory()->create([
             'name' => 'Retdvsaabb v vvhgu',
-            'image_path' => 'hhdddd/dkks/ppqw.gps']);
+            'image_path' => 'hhdddd/dkks/ppqw.gps', ]);
 
         // Act
         $service = new DepartmentService();
@@ -41,7 +41,6 @@ class DepartmentServiceTest extends TestCase
         // Act
         $service = new DepartmentService();
         $department = $service->create($departmentCreatDto);
-
 
         // Assert
         $this->assertModelExists($department);

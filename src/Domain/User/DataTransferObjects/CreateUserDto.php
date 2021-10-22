@@ -9,8 +9,7 @@ class CreateUserDto
         public string $lastName,
         public string $email,
         public string $password,
-        public int    $departmentId
-    )
-    {
+        public int $departmentId
+    ) {
     }
 }

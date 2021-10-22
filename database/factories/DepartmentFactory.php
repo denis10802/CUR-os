@@ -5,7 +5,6 @@ namespace Database\Factories;
 use App\Domain\Department\Models\Department;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-
 class DepartmentFactory extends Factory
 {
     /**
@@ -24,7 +23,7 @@ class DepartmentFactory extends Factory
     {
         return [
             'name' => $this->faker->title(),
-            'image_path' => $this->faker->url
+            'image_path' => $this->faker->url,
         ];
     }
 }

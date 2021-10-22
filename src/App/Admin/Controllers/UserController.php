@@ -20,7 +20,7 @@ class UserController
         $users = $userService->list();
 
         return $this->responseFactory->view('admin.users.index', [
-            'users' => $users
+            'users' => $users,
         ]);
     }
 
@@ -29,7 +29,7 @@ class UserController
         $departments = $departmentService->list();
 
         return $this->responseFactory->view('admin.users.create', [
-            'departments' => $departments
+            'departments' => $departments,
         ]);
     }
 
@@ -38,16 +38,14 @@ class UserController
      */
     public function store(
         StoreUserRequest $userRequest,
-        UserService      $userService,
-    ): Response
-    {
-
+        UserService $userService,
+    ): Response {
         $user = new CreateUserDto(
             $userRequest->post('firstName'),
             $userRequest->post('lastName'),
             $userRequest->post('email'),
             $userRequest->post('password'),
-            (int)$userRequest->post('departmentId'),
+            (int) $userRequest->post('departmentId'),
         );
         $userService->create($user);
 

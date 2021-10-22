@@ -17,7 +17,7 @@ class DepartmentControllerTest extends TestCase
         // Arrange
         Department::factory()->create([
             'name' => 'Вот этот заголовок',
-            'image_path' => 'должен быть нв странице'
+            'image_path' => 'должен быть нв странице',
         ]);
 
         // Act
@@ -37,12 +37,12 @@ class DepartmentControllerTest extends TestCase
         // Act
         $response = $this->post(route('departments.store'), [
             'name' => 'Bvz cyurnw',
-            'image' => $file
+            'image' => $file,
         ]);
         $fieldExists = Department::query()->where('name', 'Bvz cyurnw')->exists();
 
         // Assert
-        Storage::assertExists('departments/' . $file->hashName());
+        Storage::assertExists('departments/'.$file->hashName());
         $response->assertValid();
         $response->assertRedirect('/departments');
         $this->assertTrue($fieldExists);

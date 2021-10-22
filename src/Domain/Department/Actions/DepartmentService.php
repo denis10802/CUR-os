@@ -7,7 +7,6 @@ use App\Domain\Department\DataTransferObjects\DepartmentResponseDto;
 use App\Domain\Department\Models\Department;
 use Illuminate\Support\Facades\Storage;
 
-
 class DepartmentService
 {
     public function list(): \Illuminate\Support\Collection
@@ -21,7 +20,7 @@ class DepartmentService
     {
         $department = new Department();
         $department->name = $dto->name;
-        $department->image_path = (string)Storage::put('/departments', $dto->file);
+        $department->image_path = (string) Storage::put('/departments', $dto->file);
         $department->save();
 
         return $department;
