@@ -12,6 +12,9 @@ return $config
             'allow_single_line_anonymous_class_with_empty_body' => true,
             'allow_single_line_closure' => false,
         ],
+        'concat_space' => [
+            'spacing' => 'one',
+        ],
         'php_unit_method_casing' => ['case' => 'snake_case'],
         'phpdoc_no_package' => false,
         'phpdoc_to_comment' => false,
