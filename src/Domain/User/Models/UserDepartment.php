@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Database\Factories\DepartmentFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|UserDepartment query()
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Builder
  */
 class UserDepartment extends Model
 {

@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Database\Factories\DepartmentFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Department newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Department query()
- * @mixin \Eloquent
+ * @mixin \Illuminate\Database\Eloquent\Builder
  */
 class Department extends Model
 {
