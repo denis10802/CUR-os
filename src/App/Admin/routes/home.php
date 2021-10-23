@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\App\Admin\Controllers\DepartmentsController;
+use App\App\Admin\Controllers\SpeakerController;
 use App\App\Admin\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,11 @@ Route::prefix('departments')->group(function () {
     Route::get('/', [DepartmentsController::class, 'index'])->name('departments.index');
     Route::get('/create', [DepartmentsController::class, 'create'])->name('departments.create');
     Route::post('/', [DepartmentsController::class, 'store'])->name('departments.store');
+});
+
+Route::prefix('speakers')->group(function () {
+    Route::get('/', [SpeakerController::class, 'index'])->name('speakers.index');
+    Route::get('/create', [SpeakerController::class, 'create'])->name('speakers.create');
+
+    Route::get('/{slug}/edit', [SpeakerController::class, 'edit'])->name('speakers.edit');
 });
