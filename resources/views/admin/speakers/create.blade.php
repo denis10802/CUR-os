@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="card">
                 <form
-                    action="#"
+                    action="{{route('speakers.store')}}"
                     enctype="multipart/form-data"
                     id="quickForm"
                     novalidate="novalidate"
@@ -66,15 +66,17 @@
                                 id="departmentId"
                             >
                                 <option></option>
-{{--                                            @foreach($departments as $department)--}}
+
+                                @foreach($departments as $department)
                                     <option
-                                        value=""
+                                        value="{{$department->id}}"
                                     >
-{{--                                                    {{$department->name}}--}}
+                                        {{$department->name}}
                                     </option>
-{{--                                            @endforeach--}}
+                                @endforeach
                             </select>
                             @error('departmentId')
+
                             <span
                                 class="invalid-feedback d-block"
                                 role="alert"

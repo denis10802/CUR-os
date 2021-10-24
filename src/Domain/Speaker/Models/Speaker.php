@@ -3,6 +3,7 @@
 namespace App\Domain\Speaker\Models;
 
 use App\Domain\Department\Models\Department;
+use Database\Factories\SpeakerFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -30,6 +31,11 @@ use Illuminate\Database\Eloquent\Model;
 class Speaker extends Model
 {
     use HasFactory;
+
+    protected static function newFactory(): SpeakerFactory
+    {
+        return SpeakerFactory::new();
+    }
 
     public function department(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
