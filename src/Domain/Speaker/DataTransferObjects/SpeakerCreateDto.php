@@ -5,7 +5,7 @@ namespace App\Domain\Speaker\DataTransferObjects;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Stringable;
 
-class CreateSpeakerDto
+class SpeakerCreateDto
 {
     public function __construct(
         public string $firstName,

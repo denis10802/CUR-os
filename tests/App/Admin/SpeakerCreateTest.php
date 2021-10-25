@@ -4,7 +4,7 @@ namespace Tests\App\Admin;
 
 use App\Domain\Department\Models\Department;
 use App\Domain\Speaker\Actions\SpeakerService;
-use App\Domain\Speaker\DataTransferObjects\CreateSpeakerDto;
+use App\Domain\Speaker\DataTransferObjects\SpeakerCreateDto;
 use App\Domain\Speaker\Models\Speaker;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\UploadedFile;
@@ -52,7 +52,7 @@ class SpeakerCreateTest extends TestCase
         $surname = 'New';
         $position = 'software engineer';
         $image = UploadedFile::fake()->create('imageTest.jpg', '200', 'image/png');
-        $newsSlug = $firstName.'-'.$lastName;
+        $newsSlug = $firstName . '-' . $lastName;
         $slug = Str::of($newsSlug)->slug('-');
         $department = Department::factory()->create();
         $departmentId = $department->id;
@@ -60,7 +60,7 @@ class SpeakerCreateTest extends TestCase
         $service = new SpeakerService();
 
         // Act
-        $dto = new CreateSpeakerDto(
+        $dto = new SpeakerCreateDto(
             $firstName,
             $lastName,
             $surname,
@@ -75,13 +75,13 @@ class SpeakerCreateTest extends TestCase
         $this->assertModelExists($speaker);
         $this->assertInstanceOf(Speaker::class, $speaker);
         $this->assertFileExists($image);
-        Storage::assertExists('speakers/'.$image->hashName());
+        Storage::assertExists('speakers/' . $image->hashName());
         $this->assertDatabaseHas('speakers', [
             'first_name' => $firstName,
             'last_name' => $lastName,
             'surname' => $surname,
             'position' => $position,
-            'image_path' => 'speakers/'.$image->hashName(),
+            'image_path' => 'speakers/' . $image->hashName(),
             'slug' => $slug,
             'department_id' => $departmentId,
         ]);

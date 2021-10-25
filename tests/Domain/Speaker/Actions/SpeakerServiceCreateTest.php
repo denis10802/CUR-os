@@ -3,7 +3,7 @@
 namespace Tests\Domain\Speaker\Actions;
 
 use App\Domain\Department\Models\Department;
-use App\Domain\Speaker\DataTransferObjects\CreateSpeakerDto;
+use App\Domain\Speaker\DataTransferObjects\SpeakerCreateDto;
 use App\Domain\Speaker\Models\Speaker;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Http\UploadedFile;
@@ -23,12 +23,12 @@ class SpeakerServiceCreateTest extends TestCase
         $surname = 'New';
         $position = 'software engineer';
         $image = UploadedFile::fake()->create('imageTest.jpg', '200', 'image/png');
-        $newsSlug = $firstName.'-'.$lastName;
+        $newsSlug = $firstName . '-' . $lastName;
         $slug = Str::of($newsSlug)->slug('-');
         $department = Department::factory()->create();
         $departmentId = $department->id;
 
-        $dto = new CreateSpeakerDto(
+        $dto = new SpeakerCreateDto(
             $firstName,
             $lastName,
             $surname,
@@ -59,7 +59,7 @@ class SpeakerServiceCreateTest extends TestCase
             'last_name' => $lastName,
             'surname' => $surname,
             'position' => $position,
-            'image_path' => 'speakers/'.$image->hashName(),
+            'image_path' => 'speakers/' . $image->hashName(),
             'slug' => $dto->slug,
             'department_id' => $departmentId,
         ]);
