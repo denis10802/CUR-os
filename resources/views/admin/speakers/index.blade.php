@@ -24,27 +24,31 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="col-md-3">
-                <div class="card card-primary card-outline">
-                    <div class="card-body box-profile">
-                        <div class="text-center">
-                            <img class="profile-user-img img-fluid img-circle" src="" alt="User profile picture">
+            <div class="row">
+                @foreach($speakers as $speaker)
+                    <div class="col-md-3">
+                        <div class="card card-primary card-outline">
+                            <div class="card-body box-profile">
+                                <div class="text-center">
+                                    <img class="profile-user-img img-fluid img-circle" src="{{Storage::url($speaker->imagePath)}}" alt="User profile picture">
+                                </div>
+
+                                <h3 class="profile-username text-center">{{$speaker->lastName.' '.$speaker->firstName.' '.$speaker->surname}}</h3>
+
+                                <p class="text-muted text-center">{{$speaker->position}}</p>
+
+                                <ul class="list-group list-group-unbordered mb-3">
+                                    <li class="list-group-item">
+                                        <b>{{$speaker->department}}</b>
+                                    </li>
+                                </ul>
+
+                                <a href="{{route('speakers.edit', $speaker->slug)}}" class="btn btn-primary btn-block"><b>Изменить</b></a>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-
-                        <h3 class="profile-username text-center">Nina Mcintire</h3>
-
-                        <p class="text-muted text-center">Software Engineer</p>
-
-                        <ul class="list-group list-group-unbordered mb-3">
-                            <li class="list-group-item">
-                                <b>Followers</b>
-                            </li>
-                        </ul>
-
-                        <a href="{{route('speakers.edit','slug')}}" class="btn btn-primary btn-block"><b>Изменить</b></a>
                     </div>
-                    <!-- /.card-body -->
-                </div>
+                @endforeach
             </div>
 
         </div>
