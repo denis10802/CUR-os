@@ -36,21 +36,21 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
         'department' => [
             'driver' => 'local',
             'root' => storage_path('app/public/departments'),
-            'url' => env('APP_URL').'/storage/departments',
+            'url' => env('APP_URL') . '/storage/departments',
             'visibility' => 'public',
         ],
 
         'speakers' => [
             'driver' => 'local',
             'root' => storage_path('app/public/speakers'),
-            'url' => env('APP_URL').'/storage/speakers',
+            'url' => env('APP_URL') . '/storage/speakers',
             'visibility' => 'public',
         ],
 

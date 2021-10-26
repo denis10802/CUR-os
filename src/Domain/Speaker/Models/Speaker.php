@@ -23,7 +23,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property Department                      $department
  *
- * @method static Builder|Speaker newModelQuery()
  * @method static Builder|Speaker newQuery()
  * @method static Builder|Speaker query()
  * @mixin  Builder
