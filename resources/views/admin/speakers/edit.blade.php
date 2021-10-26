@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="card">
                 <form
-                    action="#"
+                    action="{{route('speakers.update',[$speaker->id , $speaker->slug])}}"
                     enctype="multipart/form-data"
                     id="quickForm"
                     novalidate="novalidate"
@@ -27,21 +27,21 @@
                             label="Имя"
                             placeholder="Введите имя ..."
                             fgroup-class="col-md-12"
-                            value=""
+                            value="{{$speaker->firstName}}"
                         />
                         <x-adminlte-input
                             name="lastName"
                             label="Фамилия"
                             placeholder="Введите имя ..."
                             fgroup-class="col-md-12"
-                            value=""
+                            value="{{$speaker->lastName}}"
                         />
                         <x-adminlte-input
                             name="surname"
                             label="Отчество"
                             placeholder="Введите имя ..."
                             fgroup-class="col-md-12"
-                            value=""
+                            value="{{$speaker->surname}}"
                         />
                         <x-adminlte-input
                             name="position"
@@ -49,7 +49,7 @@
                             legend="Выбрать"
                             placeholder="Выберите файл ..."
                             fgroup-class="col-md-12"
-                            value=""
+                            value="{{$speaker->position}}"
                         />
                         <x-adminlte-input-file
                             name="image"
@@ -57,7 +57,6 @@
                             legend="Выбрать"
                             placeholder="Выберите файл ..."
                             fgroup-class="col-md-12"
-                            value=""
                         />
                         <div class="form-group col-md-12">
                             <label for="departmentId">Выберите отрасль</label>
@@ -66,14 +65,16 @@
                                 class="form-control @error('departmentId') is-invalid @enderror"
                                 id="departmentId"
                             >
-                                <option></option>
-                                {{--                                            @foreach($departments as $department)--}}
-                                <option
-                                    value=""
-                                >
-                                    {{--                                                    {{$department->name}}--}}
+                                <option value="{{$speaker->departmentID}}">
+                                    {{$speaker->department}}
                                 </option>
-                                {{--                                            @endforeach--}}
+                                @foreach($departments as $department)
+                                <option
+                                    value="{{$department->id}}"
+                                >
+                                    {{$department->name}}
+                                </option>
+                                @endforeach
                             </select>
                             @error('departmentId')
                             <span

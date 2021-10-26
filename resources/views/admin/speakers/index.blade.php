@@ -43,7 +43,7 @@
                                     </li>
                                 </ul>
 
-                                <a href="{{route('speakers.edit', $speaker->slug)}}" class="btn btn-primary btn-block"><b>Изменить</b></a>
+                                <a href="{{route('speakers.edit', [$speaker->id, $speaker->slug])}}" class="btn btn-primary btn-block"><b>Изменить</b></a>
                             </div>
                             <!-- /.card-body -->
                         </div>
