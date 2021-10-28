@@ -14,7 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-           SlideTypeSeederMedical::class,
+            SlideTypeSeederMedical::class,
+            SlideTypeSeederZKH::class,
         ]);
     }
 }
