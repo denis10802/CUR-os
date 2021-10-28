@@ -11,7 +11,7 @@ class SlideTypeSeederZKH extends Seeder
     public function run()
     {
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_01.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_01.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'operatingModeOfZKH' => 'Режим работы предприятий ЖКХ',
@@ -20,7 +20,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_02.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_02.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -33,7 +33,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_03.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_03.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'equipmentUnitsInvolved' => 'Задействовано единиц техники',
@@ -42,7 +42,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_04.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_04.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'removedStreetsAcrossTheRB_km' => 'Убрано улиц по РБ, км',
@@ -53,7 +53,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_04-1.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_04-1.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'removedStreetsAcrossTheRB_km' => 'Убрано улиц по РБ, км',
@@ -62,7 +62,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_05.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_05.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'mowedStreets_km' => 'Произведен обкос улиц, км',
@@ -73,7 +73,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_05-1.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_05-1.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'wateringOfStreets_km' => 'Произведен полив улиц, км',
@@ -83,7 +83,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_06.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_06.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -94,7 +94,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_07.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_07.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'inspectedMKD' => 'Осмотрено МКД',
@@ -104,7 +104,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_08.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_08.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -115,7 +115,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_09.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_09.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'revealedViolationsInMKD' => 'Выявлено нарушений в МКД',
@@ -126,7 +126,7 @@ class SlideTypeSeederZKH extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('medical/zkh_10.jpg');
+        $slide->image_path = Storage::path('zkh/zkh_10.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'disinfectantAvirBakIssuedLeft' => 'Выдано дезинфицирующего средства "АВирБак", л. слева',
