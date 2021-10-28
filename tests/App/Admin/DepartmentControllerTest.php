@@ -42,7 +42,7 @@ class DepartmentControllerTest extends TestCase
         $fieldExists = Department::query()->where('name', 'Bvz cyurnw')->exists();
 
         // Assert
-        Storage::assertExists('departments/'.$file->hashName());
+        Storage::assertExists('departments/' . $file->hashName());
         $response->assertValid();
         $response->assertRedirect('/departments');
         $this->assertTrue($fieldExists);

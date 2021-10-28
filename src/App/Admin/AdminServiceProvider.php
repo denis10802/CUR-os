@@ -26,6 +26,6 @@ final class AdminServiceProvider extends ServiceProvider
     public function boot()
     {
         Route::middleware('web')
-            ->group(__DIR__.'/routes/home.php');
+            ->group(__DIR__ . '/routes/home.php');
     }
 }
