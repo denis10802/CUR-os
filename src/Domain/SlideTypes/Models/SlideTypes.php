@@ -2,7 +2,6 @@
 
 namespace App\Domain\SlideTypes\Models;
 
-use Database\Factories\SlideTypesFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -23,9 +22,4 @@ class SlideTypes extends Model
     protected $casts = [
         'field_maps_json' => 'array',
     ];
-
-    protected static function newFactory(): SlideTypesFactory
-    {
-        return new SlideTypesFactory();
-    }
 }
