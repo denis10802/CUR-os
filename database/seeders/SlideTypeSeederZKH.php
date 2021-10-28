@@ -123,8 +123,7 @@ class SlideTypeSeederZKH extends Seeder
             'typeOfWork' => 'Вид работ',
             'image' => 'Изображение',
         ];
-        $slide->save();
-
+        $slide->sazkh
         $slide = new SlideTypes();
         $slide->image_path = Storage::path('zkh/zkh_10.jpg');
         $slide->field_maps_json = [
