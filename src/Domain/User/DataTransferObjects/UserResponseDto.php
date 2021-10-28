@@ -8,7 +8,7 @@ class UserResponseDto
         public string $firstName,
         public string $lastName,
         public string $email,
-        public string $departmentName
+        public ?string $departmentName
     ) {
     }
 }

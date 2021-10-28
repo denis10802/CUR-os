@@ -19,7 +19,7 @@ class UserService
                     $user->first_name,
                     $user->last_name,
                     $user->email,
-                    $user->department->department->name
+                    $user->department?->department?->name
                 );
             });
     }
