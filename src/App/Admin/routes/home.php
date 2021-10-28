@@ -3,9 +3,12 @@
 declare(strict_types=1);
 
 use App\App\Admin\Controllers\DepartmentsController;
+use App\App\Admin\Controllers\HomeController;
 use App\App\Admin\Controllers\SpeakerController;
 use App\App\Admin\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/', HomeController::class)->name('home');
 
 Route::prefix('users')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name('user.index');
