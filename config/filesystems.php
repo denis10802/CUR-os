@@ -51,6 +51,14 @@ return [
             'driver' => 'local',
             'root' => storage_path('app/public/speakers'),
             'url' => env('APP_URL') . '/storage/speakers',
+            'url' => env('APP_URL') . '/storage/departments',
+            'visibility' => 'public',
+        ],
+
+        'slide_types' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/slide_types'),
+            'url' => env('APP_URL') . '/storage/slide_types',
             'visibility' => 'public',
         ],
 
