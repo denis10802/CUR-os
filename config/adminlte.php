@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'ЦУР',
     'title_prefix' => '',
-    'title_postfix' => '',
+    'title_postfix' => ' - Оперативные совещания',
 
     /*
     |--------------------------------------------------------------------------
@@ -44,12 +44,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>ЦУР</b> ОС',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'ЦУР ОС',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'usermenu_enabled' => true,
+    'usermenu_enabled' => false,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
@@ -126,8 +126,8 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
+    'classes_sidebar' => 'sidebar-light-primary elevation-2',
+    'classes_sidebar_nav' => 'navbar-child-indent',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
@@ -224,31 +224,20 @@ return [
     */
 
     'menu' => [
-        // Sidebar items:
-
         [
             'text' => 'Пользователи',
             'url' => '/users',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-users',
         ],
         [
             'text' => 'Отрасли',
             'url' => '/departments',
+            'icon' => 'fas fa-fw fa-building',
         ],
         [
             'text' => 'Спикеры',
             'url' => '/speakers',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-microphone-alt',
         ],
     ],
 
