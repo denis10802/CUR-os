@@ -235,6 +235,10 @@ return [
             'text' => 'Отрасли',
             'url' => '/departments',
         ],
+        [
+            'text' => 'Спикеры',
+            'url' => '/speakers',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
