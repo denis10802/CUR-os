@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SlideTypeSeederMedical::class,
             SlideTypeSeederZKH::class,
+            SlideTypeSeederTransport::class,
+            SlideTypeSeederEmergency::class,
+            SlideTypeSeederUniversal::class,
         ]);
     }
 }
