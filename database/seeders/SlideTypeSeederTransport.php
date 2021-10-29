@@ -21,7 +21,7 @@ class SlideTypeSeederTransport extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_02.jpg');
+        $slide->image_path = Storage::path('transport/trans_02.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'numberOfAccidentsSinceTheBeginningOfTheYear' => 'Количество ДТП с начала года',
@@ -37,7 +37,7 @@ class SlideTypeSeederTransport extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_03.jpg');
+        $slide->image_path = Storage::path('transport/trans_03.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'exitIntoTheOncomingLaneFromTheTopLeft' => 'Выезд на встречную полосу сверху слева',
@@ -48,7 +48,7 @@ class SlideTypeSeederTransport extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_04.jpg');
+        $slide->image_path = Storage::path('transport/trans_04.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'theNumberOfRecordedCasesWithDrunkDrivers' => 'Количество зафиксированных случаев с водителями, находящимися в состоянии алкогольного опьянения',
@@ -59,7 +59,7 @@ class SlideTypeSeederTransport extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_05.jpg');
+        $slide->image_path = Storage::path('transport/trans_05.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'techniquesAreInvolvedOnTheRoadsOfTheRepublic' => 'На дорогах республики задействовано техники',
@@ -70,32 +70,32 @@ class SlideTypeSeederTransport extends Seeder
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_06.jpg');
+        $slide->image_path = Storage::path('transport/trans_06.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'description' => 'Описание',
             'text' => 'Текст',
-            'image' => 'Изображение',
+            'images' => 'Изображения',
         ];
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_07.jpg');
+        $slide->image_path = Storage::path('transport/trans_07.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'description' => 'Описание',
             'text' => 'Текст',
-            'image' => 'Изображение',
+            'images' => 'Изображения',
         ];
         $slide->save();
 
         $slide = new SlideTypes();
-        $slide->image_path = Storage::path('transport/zkh_07-1.jpg');
+        $slide->image_path = Storage::path('transport/trans_07-1.jpg');
         $slide->field_maps_json = [
             'name' => 'Название',
             'description' => 'Описание',
             'text' => 'Текст',
-            'image' => 'Изображение',
+            'images' => 'Изображения',
         ];
         $slide->save();
     }
