@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Domain\SlideTypes\Models\SlideTypes;
+use App\Domain\SlideTypes\Models\SlideType;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
@@ -10,9 +10,9 @@ class SlideTypeSeederUniversal extends Seeder
 {
     public function run()
     {
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_01.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_01.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -24,11 +24,11 @@ class SlideTypeSeederUniversal extends Seeder
             'valueAtTheBottomLeftSideColumn2' => 'Значение внизу с левой стороны колонка 2',
             'valueAtTheBottomRightSideColumn2' => 'Значение внизу с правой стороны колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_02.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_02.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -60,11 +60,11 @@ class SlideTypeSeederUniversal extends Seeder
             'valueAtTheBottomLeftSideColumn3' => 'Значение внизу с левой стороны колонка 3',
             'valueAtTheBottomRightSideColumn3' => 'Значение внизу с правой стороны колонка 3',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_03.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_03.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -94,11 +94,11 @@ class SlideTypeSeederUniversal extends Seeder
             'textAtTheBottomColumn4' => 'Текс внизу колонка 4',
             'valueIAtTheBottomColumn4' => 'Значение внизу колонка 4',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_04.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_04.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -120,32 +120,32 @@ class SlideTypeSeederUniversal extends Seeder
 
             'imagesColumn2' => 'Изображения колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_05.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_05.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
             'valueColumn1' => 'Значение колонка 1',
             'descriptionColumn2' => 'Описание колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_06.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_06.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
             'date' => 'Дата',
             'value' => 'Значение',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_07.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_07.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -155,22 +155,22 @@ class SlideTypeSeederUniversal extends Seeder
             'valueInTheMiddleColumn1' => 'Значение внизу 1 колонка',
             'imagesColumn2' => 'Изображения колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_08.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_08.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
             'textUnderTheIconColumn1' => 'Текст под иконкой колонка 1',
             'imagesColumn2' => 'Изображения колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_09.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_09.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -179,11 +179,11 @@ class SlideTypeSeederUniversal extends Seeder
             'typeOfWorkColumn1' => 'Вид работ колонка 1',
             'imagesColumn2' => 'Изображения колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_10.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_10.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -193,11 +193,11 @@ class SlideTypeSeederUniversal extends Seeder
             'topTextColumn2' => 'Текст вверху колонка 2',
             'valueColumn2' => 'Значение колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_11.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_11.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -215,11 +215,11 @@ class SlideTypeSeederUniversal extends Seeder
             'valueAtTheBottomLeftSideColumn2' => 'Значение внизу с левой стороны колонка 2',
             'valueAtTheBottomRightSideColumn2' => 'Значение внизу с правой стороны колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_12.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_12.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -233,11 +233,11 @@ class SlideTypeSeederUniversal extends Seeder
             'textAtTheBottomColumn2' => 'Текс внизу колонка 2',
             'valueIAtTheBottomColumn2' => 'Значение внизу колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_13.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_13.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
             'topText' => 'Текст вверху',
@@ -250,11 +250,11 @@ class SlideTypeSeederUniversal extends Seeder
             'textAtTheBottomColumn3' => 'Текс внизу колонка 3',
             'valueIAtTheBottomColumn3' => 'Значение внизу колонка 3',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_14.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_14.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'text1' => 'Текс 1',
             'text2' => 'Текс 2',
@@ -269,11 +269,11 @@ class SlideTypeSeederUniversal extends Seeder
             'valueRightSide4' => 'Значение с правой стороны 4',
             'valueLeftSide4' => 'Значение с левой стороны 4',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_15.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_15.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
             'topTextColumn1' => 'Текст вверху колонка 1',
@@ -286,11 +286,11 @@ class SlideTypeSeederUniversal extends Seeder
             'textAtTheBottomColumn2' => 'Текс внизу колонка 2',
             'valueIAtTheBottomColumn2' => 'Значение внизу колонка 2',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_16.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_16.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
             'topText' => 'Текст вверху',
@@ -300,11 +300,11 @@ class SlideTypeSeederUniversal extends Seeder
             'textAtTheBottom' => 'Текст внизу',
             'valueIAtTheBottom' => 'Значение внизу',
         ];
-        $slide->save();
+        $slideType->save();
 
-        $slide = new SlideTypes();
-        $slide->image_path = Storage::path('universal/Doklad_17.jpg');
-        $slide->field_maps_json = [
+        $slideType = new SlideType();
+        $slideType->image_path = Storage::path('universal/Doklad_17.jpg');
+        $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
             'topText' => 'Текст вверху',
@@ -317,6 +317,6 @@ class SlideTypeSeederUniversal extends Seeder
             'selectIcon4' => 'Выбрать иконку 4',
             'textUnderTheIcon4' => 'Текст под иконкой 4',
         ];
-        $slide->save();
+        $slideType->save();
     }
 }
