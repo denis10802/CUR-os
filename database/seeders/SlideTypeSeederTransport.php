@@ -4,14 +4,13 @@ namespace Database\Seeders;
 
 use App\Domain\SlideTypes\Models\SlideType;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
 
 class SlideTypeSeederTransport extends Seeder
 {
     public function run()
     {
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_01.jpg');
+        $slideType->image_path = 'transport/trans_01.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfIncidentsPerWeek' => 'Количество ДТП за неделю',
@@ -21,7 +20,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_02.jpg');
+        $slideType->image_path = 'transport/trans_02.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfAccidentsSinceTheBeginningOfTheYear' => 'Количество ДТП с начала года',
@@ -37,7 +36,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_03.jpg');
+        $slideType->image_path = 'transport/trans_03.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'exitIntoTheOncomingLaneFromTheTopLeft' => 'Выезд на встречную полосу сверху слева',
@@ -48,7 +47,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_04.jpg');
+        $slideType->image_path = 'transport/trans_04.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'theNumberOfRecordedCasesWithDrunkDrivers' => 'Количество зафиксированных случаев с водителями, находящимися в состоянии алкогольного опьянения',
@@ -59,7 +58,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_05.jpg');
+        $slideType->image_path = 'transport/trans_05.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'techniquesAreInvolvedOnTheRoadsOfTheRepublic' => 'На дорогах республики задействовано техники',
@@ -70,7 +69,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_06.jpg');
+        $slideType->image_path = 'transport/trans_06.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -80,7 +79,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_07.jpg');
+        $slideType->image_path = 'transport/trans_07.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -90,7 +89,7 @@ class SlideTypeSeederTransport extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('transport/trans_07-1.jpg');
+        $slideType->image_path = 'transport/trans_07-1.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',

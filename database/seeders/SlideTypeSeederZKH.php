@@ -4,14 +4,13 @@ namespace Database\Seeders;
 
 use App\Domain\SlideTypes\Models\SlideType;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
 
 class SlideTypeSeederZKH extends Seeder
 {
     public function run()
     {
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_01.jpg');
+        $slideType->image_path = 'zkh/zkh_01.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'operatingModeOfZKH' => 'Режим работы предприятий ЖКХ',
@@ -20,7 +19,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_02.jpg');
+        $slideType->image_path = 'zkh/zkh_02.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -33,7 +32,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_03.jpg');
+        $slideType->image_path = 'zkh/zkh_03.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'equipmentUnitsInvolved' => 'Задействовано единиц техники',
@@ -42,7 +41,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_04.jpg');
+        $slideType->image_path = 'zkh/zkh_04.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'removedStreetsAcrossTheRB_km' => 'Убрано улиц по РБ, км',
@@ -53,7 +52,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_04-1.jpg');
+        $slideType->image_path = 'zkh/zkh_04-1.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'removedStreetsAcrossTheRB_km' => 'Убрано улиц по РБ, км',
@@ -62,7 +61,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_05.jpg');
+        $slideType->image_path = 'zkh/zkh_05.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'mowedStreets_km' => 'Произведен обкос улиц, км',
@@ -73,7 +72,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_05-1.jpg');
+        $slideType->image_path = 'zkh/zkh_05-1.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'wateringOfStreets_km' => 'Произведен полив улиц, км',
@@ -83,7 +82,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_06.jpg');
+        $slideType->image_path = 'zkh/zkh_06.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -94,7 +93,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_07.jpg');
+        $slideType->image_path = 'zkh/zkh_07.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'inspectedMKD' => 'Осмотрено МКД',
@@ -104,7 +103,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_08.jpg');
+        $slideType->image_path = 'zkh/zkh_08.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -115,7 +114,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_09.jpg');
+        $slideType->image_path = 'zkh/zkh_09.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'revealedViolationsInMKD' => 'Выявлено нарушений в МКД',
@@ -126,7 +125,7 @@ class SlideTypeSeederZKH extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('zkh/zkh_10.jpg');
+        $slideType->image_path = 'zkh/zkh_10.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'disinfectantAvirBakIssuedLeft' => 'Выдано дезинфицирующего средства "АВирБак", л. слева',

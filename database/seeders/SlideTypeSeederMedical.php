@@ -4,14 +4,13 @@ namespace Database\Seeders;
 
 use App\Domain\SlideTypes\Models\SlideType;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
 
 class SlideTypeSeederMedical extends Seeder
 {
     public function run()
     {
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_01.jpg');
+        $slideType->image_path = 'medical/Zdrav_01.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'coronavirusInfectionCasesRegistered' => 'Зарегистрировано случаев короновирусной инфекции',
@@ -23,7 +22,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_02.jpg');
+        $slideType->image_path = 'medical/Zdrav_02.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'dischargedWithRecoveryForTheEntireTimeOfObservationOnTheLeft' => 'Выписано с выздоровлением за все время наблюдения слева',
@@ -33,7 +32,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_03.jpg');
+        $slideType->image_path = 'medical/Zdrav_03.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'areHospitalizedOnTheLeft' => 'Находятся на стационарном лечении слева',
@@ -44,7 +43,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_04.jpg');
+        $slideType->image_path = 'medical/Zdrav_04.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'worksLaboratories' => 'Работает лабораторий',
@@ -56,7 +55,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_05.jpg');
+        $slideType->image_path = 'medical/Zdrav_05.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'totalAvailableForPatientsWithNCI' => 'Всего для пациентов с НКИ доступно',
@@ -68,7 +67,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_06.jpg');
+        $slideType->image_path = 'medical/Zdrav_06.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'separateSubdivisionClinicalAndDiagnosticInfectiousDiseaseCenterUfaDistrictZubovoVillage' => 'Обособленное подразделение (филиал)
@@ -81,7 +80,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_07.jpg');
+        $slideType->image_path = 'medical/Zdrav_07.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'totalNumberOfCallsPerKnock' => 'Общее количество вызовов за стуки',
@@ -92,7 +91,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_08.jpg');
+        $slideType->image_path = 'medical/Zdrav_08.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'ambulance20minInterval' => 'По скорой медицинской помощи (20 мин. интервал)',
@@ -102,7 +101,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_09.jpg');
+        $slideType->image_path = 'medical/Zdrav_09.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'amountOfReceivedVaccineGamCOVIDVacSputnikVagainstNewCoronavirusInfection' => 'Количество поступившей вакцины
@@ -117,7 +116,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_10.jpg');
+        $slideType->image_path = 'medical/Zdrav_10.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'amountOfReceivedEpiVacCoronaVaccineAgainstNewCoronavirusInfection' => 'Количество поступившей вакцины
@@ -132,7 +131,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_11.jpg');
+        $slideType->image_path = 'medical/Zdrav_11.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'gamCOVIDVakSputnikVReceivedPInTotalInTheRepublicOfBashkortostan' => '"Гам-КОВИД-Вак" (Спутник-V) Всего поступило в Республику Башкортостан',
@@ -145,7 +144,7 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('medical/Zdrav_12.jpg');
+        $slideType->image_path = 'medical/Zdrav_12.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfRequestsSinceNovember_16_2020' => 'Количество обращений с 16 ноября 2020 г',

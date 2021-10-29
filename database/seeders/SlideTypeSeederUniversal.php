@@ -4,14 +4,13 @@ namespace Database\Seeders;
 
 use App\Domain\SlideTypes\Models\SlideType;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
 
 class SlideTypeSeederUniversal extends Seeder
 {
     public function run()
     {
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_01.jpg');
+        $slideType->image_path = 'universal/Doklad_01.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -27,7 +26,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_02.jpg');
+        $slideType->image_path = 'universal/Doklad_02.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -63,7 +62,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_03.jpg');
+        $slideType->image_path = 'universal/Doklad_03.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -97,7 +96,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_04.jpg');
+        $slideType->image_path = 'universal/Doklad_04.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -123,7 +122,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_05.jpg');
+        $slideType->image_path = 'universal/Doklad_05.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -134,7 +133,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_06.jpg');
+        $slideType->image_path = 'universal/Doklad_06.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
@@ -144,7 +143,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_07.jpg');
+        $slideType->image_path = 'universal/Doklad_07.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -158,7 +157,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_08.jpg');
+        $slideType->image_path = 'universal/Doklad_08.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -169,7 +168,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_09.jpg');
+        $slideType->image_path = 'universal/Doklad_09.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -182,7 +181,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_10.jpg');
+        $slideType->image_path = 'universal/Doklad_10.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -196,7 +195,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_11.jpg');
+        $slideType->image_path = 'universal/Doklad_11.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -218,7 +217,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_12.jpg');
+        $slideType->image_path = 'universal/Doklad_12.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -236,7 +235,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_13.jpg');
+        $slideType->image_path = 'universal/Doklad_13.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
@@ -253,7 +252,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_14.jpg');
+        $slideType->image_path = 'universal/Doklad_14.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'text1' => 'Текс 1',
@@ -272,7 +271,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_15.jpg');
+        $slideType->image_path = 'universal/Doklad_15.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTopColumn1' => 'Выбрать иконку вверху колонка 1',
@@ -289,7 +288,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_16.jpg');
+        $slideType->image_path = 'universal/Doklad_16.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',
@@ -303,7 +302,7 @@ class SlideTypeSeederUniversal extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('universal/Doklad_17.jpg');
+        $slideType->image_path = 'universal/Doklad_17.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'selectIconAtTheTop' => 'Выбрать иконку вверху',

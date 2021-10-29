@@ -4,14 +4,13 @@ namespace Database\Seeders;
 
 use App\Domain\SlideTypes\Models\SlideType;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Storage;
 
 class SlideTypeSeederEmergency extends Seeder
 {
     public function run()
     {
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_01.jpg');
+        $slideType->image_path = 'hs/hs_01.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfFiresPerWeek' => 'Количество пожаров за неделю',
@@ -22,7 +21,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_02.jpg');
+        $slideType->image_path = 'hs/hs_02.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfFatalitiesInFiresPerWeekAbove' => 'Количество погибших в пожарах за неделю вверху',
@@ -41,7 +40,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_04.jpg');
+        $slideType->image_path = 'hs/hs_04.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'theNumberOfMunicipalitiesWhereTheEmergencyOccurred' => 'Количество муниципальных образований, где произошло ЧС',
@@ -49,7 +48,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_05.jpg');
+        $slideType->image_path = 'hs/hs_05.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfPreventiveRaidsPerWeek' => 'Количество профилактических рейдов за неделю',
@@ -59,7 +58,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_08.jpg');
+        $slideType->image_path = 'hs/hs_08.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'rescuedPerson ' => 'Спасено человек с 2016 год',
@@ -70,7 +69,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_09.jpg');
+        $slideType->image_path = 'hs/hs_09.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'deathTollAtTheTop' => 'Количество погибших вверху',
@@ -89,7 +88,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_10.jpg');
+        $slideType->image_path = 'hs/hs_10.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -101,7 +100,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_11.jpg');
+        $slideType->image_path = 'hs/hs_11.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'deathTollAtTheTop' => 'Количество погибших вверху',
@@ -120,7 +119,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_12.jpg');
+        $slideType->image_path = 'hs/hs_12.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -132,7 +131,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_13.jpg');
+        $slideType->image_path = 'hs/hs_13.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'deathTollAtTheTop' => 'Количество погибших вверху',
@@ -151,7 +150,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_16.jpg');
+        $slideType->image_path = 'hs/hs_16.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -163,7 +162,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_15.jpg');
+        $slideType->image_path = 'hs/hs_15.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'deathTollAtTheTop' => 'Количество погибших вверху',
@@ -182,7 +181,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs__14.jpg');
+        $slideType->image_path = 'hs/hs__14.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -194,7 +193,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs__18.jpg');
+        $slideType->image_path = 'hs/hs__18.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfVictims' => 'Количество пострадавших',
@@ -205,7 +204,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs__19.jpg');
+        $slideType->image_path = 'hs/hs__19.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -218,7 +217,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs__19-1.jpg');
+        $slideType->image_path = 'hs/hs__19-1.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -231,7 +230,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = Storage::path('hs/hs_20-1.jpg');
+        $slideType->image_path = 'hs/hs_20-1.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'evacuatedDuringResponse' => 'Эвакуировано в ходе реагирования',
