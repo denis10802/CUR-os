@@ -28,7 +28,7 @@ class SlideTypeSeederZKH extends Seeder
             'mkdInTheZone' => 'МКД в зоне',
             'szoInTheZone' => 'СЗО в зоне',
             'status' => 'Статус',
-            'image' => 'Изображение',
+            'images' => 'Изображения',
         ];
         $slide->save();
 
@@ -89,7 +89,7 @@ class SlideTypeSeederZKH extends Seeder
             'description' => 'Описание',
             'text' => 'Текст',
             'typeOfWork' => 'Вид работ',
-            'image' => 'Изображение',
+            'images' => 'Изображения',
         ];
         $slide->save();
 
@@ -110,7 +110,7 @@ class SlideTypeSeederZKH extends Seeder
             'description' => 'Описание',
             'text' => 'Текст',
             'typeOfWork' => 'Вид работ',
-            'image' => 'Изображение',
+            'images' => 'Изображения',
         ];
         $slide->save();
 
