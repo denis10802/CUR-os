@@ -16,7 +16,7 @@ class CreateSlideTypesTable extends Migration
         Schema::create('slide_types', function (Blueprint $table) {
             $table->id();
             $table->string('image_path');
-            $table->json('field_maps_json');
+            $table->json('fields_map');
             $table->timestamps();
         });
     }
