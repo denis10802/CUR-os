@@ -181,7 +181,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = 'hs/hs__14.jpg';
+        $slideType->image_path = 'hs/hs_14.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -193,7 +193,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = 'hs/hs__18.jpg';
+        $slideType->image_path = 'hs/hs_18.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'numberOfVictims' => 'Количество пострадавших',
@@ -204,7 +204,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = 'hs/hs__19.jpg';
+        $slideType->image_path = 'hs/hs_19.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
@@ -217,7 +217,7 @@ class SlideTypeSeederEmergency extends Seeder
         $slideType->save();
 
         $slideType = new SlideType();
-        $slideType->image_path = 'hs/hs__19-1.jpg';
+        $slideType->image_path = 'hs/hs_19-1.jpg';
         $slideType->fields_map = [
             'name' => 'Название',
             'description' => 'Описание',
