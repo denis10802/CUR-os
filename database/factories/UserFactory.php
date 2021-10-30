@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Domain\User\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 
 class UserFactory extends Factory
 {
@@ -39,6 +40,19 @@ class UserFactory extends Factory
         return $this->state(function (array $attributes) {
             return [
                 'email_verified_at' => null,
+            ];
+        });
+    }
+
+    public function admin(): UserFactory
+    {
+        return $this->state(function () {
+            return [
+                'first_name' => 'Admin',
+                'last_name' => 'Admin',
+                'email' => 'admin@admin.ru',
+                'password' => Hash::make('admin'),
+                'has_root_access' => true,
             ];
         });
     }

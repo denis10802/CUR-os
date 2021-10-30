@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\App\Admin\Controllers\DepartmentsController;
 use App\App\Admin\Controllers\HomeController;
+use App\App\Admin\Controllers\SlideTypeController;
 use App\App\Admin\Controllers\SpeakerController;
 use App\App\Admin\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -28,4 +29,8 @@ Route::prefix('speakers')->group(function () {
     Route::post('/', [SpeakerController::class, 'store'])->name('speakers.store');
     Route::get('/{id}/{slug}/edit', [SpeakerController::class, 'edit'])->name('speakers.edit');
     Route::post('/{id}/{slug}', [SpeakerController::class, 'update'])->name('speakers.update');
+});
+
+Route::prefix('slide_types')->group(function () {
+    Route::get('/', [SlideTypeController::class, 'index'])->name('slide_type.index');
 });

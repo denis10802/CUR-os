@@ -239,6 +239,11 @@ return [
             'url' => '/speakers',
             'icon' => 'fas fa-fw fa-microphone-alt',
         ],
+        [
+            'text' => 'Типы слайдов',
+            'url' => '/slide_types',
+            'icon' => 'fas fa-fw fa-clone',
+        ],
     ],
 
     /*
