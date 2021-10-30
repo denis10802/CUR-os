@@ -95,7 +95,6 @@ class SlideTypeSeederMedical extends Seeder
         $slideType->fields_map = [
             'name' => 'Название',
             'ambulance20minInterval' => 'По скорой медицинской помощи (20 мин. интервал)',
-            'totalNumberOfWorkingMedicalTeams' => 'Общее количество работающих врачебных бригад',
             'forUrgentIndicationsWithin2Hours' => 'По неотложным показаниям (в течение 2 часов)',
         ];
         $slideType->save();
@@ -138,8 +137,8 @@ class SlideTypeSeederMedical extends Seeder
             'epiVacCoronaReceivedInTotalInTheRepublicOfBashkortostan' => '«ЭпиВакКорона» Всего поступило в Республику Башкортостан',
             'inoculatedWith1and2ComponentsOnTheLeft' => 'Привито 1 и 2 компонентами слева',
             'inoculatedWith1and2ComponentsOnTheRight' => 'Привито 1 и 2 компонентами справа',
-            'inoculatedWith1and2ComponentsOnTheLeftInPercents' => 'Привито 1 и 2 компонентами слева',
-            'inoculatedWith1and2ComponentsOnTheRightInPercents' => 'Привито 1 и 2 компонентами справа',
+            'inoculatedWith2ComponentsOnTheLeftInPercents' => 'Привито 2 компонентами слева',
+            'inoculatedWith2ComponentsOnTheRightInPercents' => 'Привито 2 компонентами справа',
         ];
         $slideType->save();
 

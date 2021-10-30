@@ -188,7 +188,7 @@ class SlideTypeSeederUniversal extends Seeder
             'topTextColumn1' => 'Текст вверху колонка 1',
             'valueColumn1' => 'Значение колонка 1',
 
-            'SelectIconAtTheTopColumn2' => 'Выбрать иконку вверху колонка 2',
+            'selectIconAtTheTopColumn2' => 'Выбрать иконку вверху колонка 2',
             'topTextColumn2' => 'Текст вверху колонка 2',
             'valueColumn2' => 'Значение колонка 2',
         ];
